@@ -1,0 +1,235 @@
+body{
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-rows: auto;
+}
+
+ img{
+    width: 200px;
+    margin: auto;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: auto;
+    text-align: center;
+    gap: 20px;
+}
+
+header h1{
+    color: #465e6d    ;
+    font-size: 30px;
+}
+
+
+
+header  a{
+    text-decoration: none;
+    color: #a0eaee;
+    font-weight: bold;
+    
+}
+
+header section{
+    margin: auto;
+    text-align: center;
+}
+
+.description{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    background-color: #2cbcc3;
+    padding-top: 10px;
+    color: white;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.sections{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 40px;
+}
+
+
+
+.sect{
+    margin: auto;
+    text-align: center;
+}
+
+.sect>*{
+    margin: auto;
+    margin-top: 10px;
+}
+
+.food{
+    /* border: solid 2px green; */
+    background-image: url("../images/treats.svg");
+  
+   position: relative;
+    width: 300px;
+    height: 200px;
+    
+}
+
+.food img{
+    width: 40px;
+    position: absolute;
+    right: -20px;
+    top:-20px;
+
+}
+
+.food div{
+    color: white;
+    background-color: rgb(1, 1, 87);
+    background-blend-mode: difference;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0px;
+}
+
+footer{
+    background-color: #dce4ec;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+@media(min-width:720px) and (max-width:900px){
+    header{
+      
+        grid-template-columns: 2fr repeat(4,1fr) ;
+        grid-template-rows: 1px 20px 20px;
+
+        grid-template-areas: " . . . . ." "name p1 p2 p3 p4"  ". . . . .";
+
+        width: 100%;
+
+        margin-top: -10px;
+        height: 60px;
+        position: fixed;
+        background-color: white;
+        z-index: 1;
+        
+
+    }
+
+
+    header h1{
+
+        grid-area: name;
+
+        font-size: 20px;
+
+        margin: 0px;
+    }
+
+    #a1{
+        grid-area: p1;
+    }
+
+    #a2{
+        grid-area: p2;
+    }
+
+    #a3{
+        grid-area: p3;
+    }
+
+    #a4{
+        grid-area: p4;
+    }
+
+    .sections{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sect1{
+        line-height: 30px;
+    }
+
+    .sect3{
+        grid-column: -3/-1;
+    }
+
+ 
+}
+
+@media(min-width:901px){
+    header{
+      
+        grid-template-columns: 4fr repeat(4,100px) ;
+        grid-template-rows: 1px 20px 20px;
+
+        grid-template-areas: " . . . . ." "name p1 p2 p3 p4"  ". . . . .";
+        
+        width: 100%;
+        padding: 0px;
+        margin-top: -10px;
+        height: 60px;
+        position: fixed;
+        background-color: white;
+        z-index: 1;
+        
+
+    }
+
+
+    header h1{
+
+        grid-area: name;
+
+        font-size: 20px;
+
+        margin: 0px;
+    }
+
+    #a1{
+        grid-area: p1;
+    }
+
+    #a2{
+        grid-area: p2;
+    }
+
+    #a3{
+        grid-area: p3;
+    }
+
+    #a4{
+        grid-area: p4;
+    }
+
+    .sections{
+        grid-template-columns: 1fr 1fr 1fr;
+        /* border: solid 2px rgb(219, 87, 25); */
+        width: 83%;
+        margin: auto;
+    }
+
+    .sect{
+        height: 100%;
+        /* border: solid 2px rebeccapurple; */
+    }
+
+}
+
+
